@@ -1,0 +1,75 @@
+.breed-select {
+    width: 400px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.temperament-span {
+    font-weight: bold;
+}
+
+.cat-info {
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+}
+
+.loader-r {
+    width: 55px;
+    height: 55px;
+    border: 5px dotted #201313;
+    border-radius: 50%;
+    border-style: solid solid dotted dotted;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 5s linear infinite;
+}
+
+.loader-r::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px dotted #360f03;
+    border-style: solid solid dotted;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    animation: rotationBack 1s linear infinite;
+    transform-origin: center center;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
